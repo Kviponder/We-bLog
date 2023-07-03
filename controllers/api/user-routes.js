@@ -24,43 +24,42 @@ router.post("/", async (req, res) => {
 });
 
 // Login route
-router.post("/login", async, (req, res) => {
-    try {
-        const user = await User.findOne({
-            where: {
-                username: req.body.username,
-            },
-        });
-        if (!user) {
-            res.status(400).json({ message: "No user account found!" });
-            return;
-        }
-        const validPassword = await user.checkPassword(req.body.password);
-        if (!validPassword) {
-            res.status(400).json({ message: "No user account found!" });
-            return;
-        }
-        req.session.save(() => {
-            req.session.user_id = user.id;
-            req.session.username = user.username;
-            req.session.loggedIn = true;
-            res.json({ user, message: "You are now logged in" });
-        });
-    } catch (err) {
-        res.status(400).json(err);
-        console.log("Error in user-routes.js", err);
+router.post("/login", async (req, res) => {
+  try {
+    const user = await User.findOne({
+      where: {
+        username: req.body.username,
+      },
+    });
+    if (!user) {
+      res.status(400).json({ message: "No user account found!" });
+      return;
     }
+    const validPassword = await user.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: "No user account found!" });
+      return;
+    }
+    req.session.save(() => {
+      req.session.user_id = user.id;
+      req.session.username = user.username;
+      req.session.loggedIn = true;
+      res.json({ user, message: "You are now logged in" });
+    });
+  } catch (err) {
+    res.status(400).json(err);
+    console.log("Error in user-routes.js", err);
+  }
 });
 
 // Logout route
 router.post("/logout", (req, res) => {
-    if (req.session.loggedIn) {
-        req.session.destroy(() => {
-            res.status(204).end();
-            console.log("User logged out");
-        }
-        );
-    } else {
-        res.status(404).end();
-    }
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+      console.log("User logged out");
+    });
+  } else {
+    res.status(404).end();
+  }
 });
