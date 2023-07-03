@@ -20,24 +20,43 @@ router.post("/", withAuth, async (req, res) => {
 
 // PUT /api/posts/1
 router.put("/:id", withAuth, async (req, res) => {
-    try {
-        const [affectedRows] = await Post.update(req.body, {
-            where: {
-                id: req.params.id,
-            },
-        });
-        if (affectedRows > 0) {
-            res.status(200).end();
-            console.log("Post updated");
-        }
-        else {
-            res.status(404).end();
-            console.log("Post not found");
-        }
-    } catch (err) {
-        res.status(500).json(err);
-        console.log("Error in post-routes.js Put method", err);
+  try {
+    const [affectedRows] = await Post.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (affectedRows > 0) {
+      res.status(200).end();
+      console.log("Post updated");
+    } else {
+      res.status(404).end();
+      console.log("Post not found");
     }
+  } catch (err) {
+    res.status(500).json(err);
+    console.log("Error in post-routes.js Put method", err);
+  }
 });
 
+router.delete("/:id", withAuth, async, (req, res) => {
+  try {
+    const [affectedRows] = Post.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (affectedRows > 0) {
+      res.status(200).end();
+      console.log("Post deleted");
+    } else {
+      res.status(404).end();
+      console.log("Post not found");
+    }
+  } catch (err) {
+    res.status(500).json(err);
+    console.log("Error in post-routes.js Delete method", err);
+  }
+});
 
+module.exports = router;
