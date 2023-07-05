@@ -41,15 +41,14 @@ router.get("/post/:id", async (req, res) => {
     res.status(500).json(err);
     console.log("Error in home-routes.js", err);
   }
-
-  //login route
-  router.get("/login", (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect("/");
-      return;
-    }
-    res.render("login");
-  });
+});
+//login route
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
 });
 
 //signup route
