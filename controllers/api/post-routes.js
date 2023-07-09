@@ -11,7 +11,8 @@ router.post("/", withAuth, async (req, res) => {
       ...body,
       user_id: req.session.user_id,
     });
-    res.json(newPost);
+    console.log("New post created")
+    res.status(200).res.json(newPost);
   } catch (err) {
     res.status(500).json(err);
     console.log("Error in post-routes.js post method", err);
