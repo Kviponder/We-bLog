@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Fira Code", monospace;
 }
 
 header {
@@ -14,7 +14,6 @@ nav {
   width: 100%;
   padding: 20px;
   background: #ccc;
-  padding: 20px;
 }
 
 nav ul {
@@ -22,12 +21,24 @@ nav ul {
   margin: 0;
   padding: 0;
   text-decoration: none;
-
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 main {
@@ -39,6 +50,53 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+/* Additional styles for login form */
+#login-form,
+#sign-up-form {
+  width: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+#login-form div,
+#sign-up-form div {
+  margin-bottom: 10px;
+}
+
+#login-form label,
+#sign-up-form label {
+  display: block;
+  font-weight: bold;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"],
+#sign-up-form input[type="email"],
+#sign-up-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+#login-form button,
+#sign-up-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#login-form button:hover,
+#sign-up-form button:hover {
+  background-color: #777;
+  color: #fff;
 }
 
 /* Additional styles for responsiveness */
