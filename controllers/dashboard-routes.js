@@ -21,13 +21,6 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-// Create a new post
-router.get("/new", withAuth, (req, res) => {
-  res.render("new-post", {
-    //This is the new-post.handlebars file
-    layout: "dashboard", //This is the dashboard.handlebars file
-  });
-});
 
 // Edit a post
 router.get("/edit/:id", withAuth, async (req, res) => {

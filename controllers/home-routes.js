@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Post, Comment, User } = require("../models/");
+const withAuth = require("../utils/auth");
 
 // GET all posts for dashboard
 router.get("/", async (req, res) => {
@@ -59,6 +60,14 @@ router.get("/sign-up", (req, res) => {
   }
   console.log("Rendering sign-up view");
   res.render("sign-up");
+});
+
+// Create a new post
+router.get("/new", withAuth, (req, res) => {
+  res.render("new-post", {
+    //This is the new-post.handlebars file
+    layout: "dashboard", //This is the dashboard.handlebars file
+  });
 });
 
 module.exports = router;
