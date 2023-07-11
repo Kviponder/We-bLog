@@ -63,12 +63,14 @@ footer {
 }
 
 #login-form div,
-#sign-up-form div {
+#sign-up-form div,
+#post-form div {
   margin-bottom: 10px;
 }
 
 #login-form label,
-#sign-up-form label {
+#sign-up-form label,
+#post-form label {
   display: block;
   font-weight: bold;
 }
@@ -76,14 +78,17 @@ footer {
 #login-form input[type="email"],
 #login-form input[type="password"],
 #sign-up-form input[type="email"],
-#sign-up-form input[type="password"] {
+#sign-up-form input[type="password"],
+#post-form input[type="text"],
+#post-form textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
 }
 
 #login-form button,
-#sign-up-form button {
+#sign-up-form button,
+#post-form button {
   display: block;
   width: 100%;
   padding: 10px;
@@ -94,11 +99,11 @@ footer {
 }
 
 #login-form button:hover,
-#sign-up-form button:hover {
+#sign-up-form button:hover,
+#post-form button:hover {
   background-color: #777;
   color: #fff;
 }
-
 /* Additional styles for responsiveness */
 @media (max-width: 768px) {
   header,

@@ -45,7 +45,7 @@ router.get("/post/:id", async (req, res) => {
 //login route
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/new");
     return;
   }
   res.render("login");
@@ -54,7 +54,7 @@ router.get("/login", (req, res) => {
 //signup route
 router.get("/sign-up", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/new");
     return;
   }
   console.log("Rendering sign-up view");
