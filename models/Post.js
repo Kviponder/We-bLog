@@ -1,4 +1,4 @@
-const { Sequelize, Model, DataTypes} = require("sequelize");
+const { Sequelize, Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config");
 
 //Initialize the Post model by extending off Sequelize's Model class

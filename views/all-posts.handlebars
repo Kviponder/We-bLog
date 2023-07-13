@@ -1,5 +1,5 @@
 <div class="posts">
-  <div class="post">
+ <div class="post">
     <h2>TESTING</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
       explicabo necessitatibus provident, dolorem maiores porro harum natus, nam
@@ -24,13 +24,14 @@
     <p>By author on date</p>
   </div>
 
-  {{!-- {{#each posts}}
-        <div class="post">
-            <h2>{{title}}</h2>
-            <p>{{body}}</p>
-        </div>
-        <div class="caption">
-            <p>By {{author}} on {{date}}</p>
-        </div>
-    {{/each}} --}}
+  {{#each posts}}
+    <div class="post">
+      <h2>{{title}}</h2>
+      <p>{{body}}</p>
+    </div>
+    <div class="caption">
+      <p>By {{User.username}} on {{format_date createdAt}}</p>
+    </div>
+  {{/each}}
 </div>
+

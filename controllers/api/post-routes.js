@@ -6,13 +6,14 @@ const withAuth = require("../../utils/auth");
 // POST /api/posts
 router.post("/", withAuth, async (req, res) => {
   const body = req.body;
+  console.log( req.body)
   try {
     const newPost = await Post.create({
       ...body,
       user_id: req.session.user_id,
     });
     console.log("New post created")
-    res.status(200).res.json(newPost);
+    res.status(200).json(newPost);
   } catch (err) {
     res.status(500).json(err);
     console.log("Error in post-routes.js post method", err);
