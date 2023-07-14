@@ -11,10 +11,12 @@
 
   </head>
   <body>
-    <header>We-Blog</header>
+    <header>
+      <a href="/">We-Blog</a>
+      </header>
     <nav>
       <ul>
-        {{#if User}}
+        {{#if logged_in}}
           <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="/new">New Post</a></li>
           <li><a href="#" id="logout">Logout</a></li>
@@ -33,9 +35,9 @@
     </main>
 
     <footer>footer!</footer>
-{{#if user_id}}
-    <script src="/js/logout.js"></script>
-{{/if}}
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
 
   </body>
 </html>

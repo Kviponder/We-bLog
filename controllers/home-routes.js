@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
     // Pass serialized data and session flag into template
-    res.render("all-posts", { posts });
+    res.render("all-posts", { posts, logged_in: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
     console.log("Error in home-routes.js", err);
