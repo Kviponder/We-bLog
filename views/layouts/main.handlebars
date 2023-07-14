@@ -14,16 +14,29 @@
     <header>We-Blog</header>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/sign-up">Sign Up!</a></li>
+        {{#if User}}
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/new">New Post</a></li>
+          <li><a href="#" id="logout">Logout</a></li>
+        {{else}}
+
+          <li><a href="/">Home</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/sign-up">Sign Up!</a></li>
+        {{/if}}
 
       </ul>
     </nav>
+
     <main>
       {{{body}}}
     </main>
 
     <footer>footer!</footer>
+{{#if user_id}}
+    <script src="/js/logout.js"></script>
+{{/if}}
+
   </body>
 </html>
+```

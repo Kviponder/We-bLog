@@ -77,7 +77,7 @@ footer {
 
 #login-form input[type="username"],
 #login-form input[type="password"],
-#sign-up-form input[type="password"],
+#sign-up-form input[type="username"],
 #sign-up-form input[type="password"],
 #post-form input[type="text"],
 #post-form textarea {
