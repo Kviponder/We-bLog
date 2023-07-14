@@ -10,7 +10,6 @@
             {{format_date post.createdAt}}
         </p>
     </div>
-
     <div>
         <h3>Comments</h3>
         <div class="comment">
@@ -25,7 +24,7 @@
     <div>
         <h3>Comments</h3>
         <div class="comment">
-            {{#each post.comments}}
+            {{#each post.comment}}
             <p>{{this.body}}</p>
             <p>By {{this.username}} on 
                 {{format_date createdAt}}
@@ -33,4 +32,21 @@
             {{/each}}
         </div>
         {{/if}} 
+    </div>
+<div>
+   <h3>
+  <a>
+
+    <span>Add a Comment</span>
+  </a>
+</h3>
+
+    <form id="comment-form">
+        <input type="hidden" name="post-id" value="{{post.id}}" />
+
+        <textarea name="comment-body" id="comment-body"></textarea>
+        <button type="submit" id="commentButton" >Add Comment</button>
+    </form>
 </div>
+
+<script src="/js/comment.js"></script>

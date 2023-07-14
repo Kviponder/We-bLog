@@ -57,7 +57,7 @@ main {
   padding: 20px;
 }
 
-main h2 a{
+main h2 a {
   text-decoration: none;
   color: #000;
 }
@@ -68,8 +68,6 @@ footer {
   padding: 20px;
   text-align: center;
 }
-
-
 
 /* Additional styles for login form */
 #login-form,
@@ -123,6 +121,32 @@ footer {
   background-color: #777;
   color: #fff;
 }
+#comment-body {
+  width: 30%;
+  height: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+#commentButton {
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#commentButton:hover {
+  background-color: #777;
+}
+
 /* Additional styles for responsiveness */
 @media (max-width: 768px) {
   header,
