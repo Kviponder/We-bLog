@@ -6,8 +6,8 @@
             <p>{{post.body}}</p>
     </div>
     <div class="caption">
-        <p>By {{req.body.user}} on  
-            {{!-- {{format_date createdAt}} --}}
+        <p>By {{post.User.username}} on  
+            {{format_date post.createdAt}}
         </p>
     </div>
 
@@ -21,16 +21,16 @@
                  format_date this.createdAt
                 </p>
         </div>
-    {{!-- {{#if post.comments}}
+    {{#if post.comments}}
     <div>
         <h3>Comments</h3>
         <div class="comment">
             {{#each post.comments}}
             <p>{{this.body}}</p>
             <p>By {{this.username}} on 
-                {{!-- {{format_date this.createdAt}} --}}
+                {{format_date createdAt}}
                 </p>
-            {{!-- {{/each}}
+            {{/each}}
         </div>
-        {{/if}}  --}}
+        {{/if}} 
 </div>
