@@ -1,15 +1,36 @@
 <div>
     <div class="post">
-            <h2>title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci explicabo necessitatibus provident, dolorem maiores porro harum natus, nam doloremque deserunt pariatur voluptates culpa! Aperiam voluptas aut animi vel. Sed, totam molestiae tenetur, eveniet optio eius sunt asperiores illo reiciendis, consequatur odit in exercitationem aliquid neque. Eius sit neque porro beatae?</p>
+            <h2>
+                {{post.title}}
+            </h2>
+            <p>{{post.body}}</p>
+    </div>
+    <div class="caption">
+        <p>By {{req.body.user}} on  
+            {{!-- {{format_date createdAt}} --}}
+        </p>
+    </div>
+
+    <div>
+        <h3>Comments</h3>
+        <div class="comment">
+            
+            <p>this.body</p>
+            <p>By this.username on 
+                <br>
+                 format_date this.createdAt
+                </p>
         </div>
-        <div class="caption">
-            <p>By author on date</p>
+    {{!-- {{#if post.comments}}
+    <div>
+        <h3>Comments</h3>
+        <div class="comment">
+            {{#each post.comments}}
+            <p>{{this.body}}</p>
+            <p>By {{this.username}} on 
+                {{!-- {{format_date this.createdAt}} --}}
+                </p>
+            {{!-- {{/each}}
         </div>
-        <div>
-            <h3>Comments</h3>
-            <div class="comment">
-                <p>comment</p>
-                <p>By author on date</p>
-        </div>
+        {{/if}}  --}}
 </div>
