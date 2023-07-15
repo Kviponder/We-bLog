@@ -15,7 +15,7 @@ const commentHandler = async function (event) {
         "Content-Type": "application/json",
       },
     });
-    // document.location.reload();
+    document.location.reload();
   }
 };
 document

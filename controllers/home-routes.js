@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET one post
-router.get("/post/:id", async (req, res) => {
+router.get("/post/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -34,7 +34,9 @@ router.get("/post/:id", async (req, res) => {
 
     if (postData) {
       const post = postData.get({ plain: true });
+
       res.render("single-post", { post });
+      
     } else {
       res.status(404).end();
     }
@@ -43,6 +45,7 @@ router.get("/post/:id", async (req, res) => {
     console.log("Error in home-routes.js", err);
   }
 });
+
 //login route
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {

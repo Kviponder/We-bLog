@@ -3,7 +3,7 @@ const router = require("express").Router();
 const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-// POST /api/posts
+// POST /api/post
 router.post("/", withAuth, async (req, res) => {
   const body = req.body;
   console.log( req.body)

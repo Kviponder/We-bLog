@@ -41,9 +41,10 @@ nav ul li {
 }
 
 nav ul li a {
+  margin: 0 20px;
+  padding: 15px;
   color: #333;
   text-decoration: none;
-  padding: 8px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
@@ -51,10 +52,15 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #333;
   color: #fff;
+  border: #fff solid 1px;
 }
+
 
 main {
   padding: 20px;
+  margin: 0 200px;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 
 main h2 a {
@@ -152,5 +158,19 @@ footer {
   header,
   footer {
     font-size: 18px;
+  }
+
+main {
+  margin: 0 20px;
+  }
+  
+  #login-form,
+  #sign-up-form,
+  #post-form {
+  width: 100%;
+  }
+  
+  #comment-body {
+  width: 100%;
   }
 }
