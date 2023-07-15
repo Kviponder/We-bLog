@@ -7,8 +7,8 @@ class Post extends Model {}
 //Set up the fields and rules for the Post model
 Post.init(
   {
-    title: DataTypes.STRING,
-    body: DataTypes.STRING,
+    title: DataTypes.STRING(255),
+    body: DataTypes.STRING(1000),
   },
   {
     sequelize,

@@ -6,23 +6,23 @@
             <p>{{post.body}}</p>
     </div>
     <div class="caption">
-        <p>By {{post.User.username}} on  
+        <p>By {{post.user.username}} on  
             {{format_date post.createdAt}}
         </p>
     </div>
-    {{#if post.comments}}
-    <div>
+    {{#if post.Comments}}
+    <div id="commentCont">
         <h3>Comments</h3>
         <div class="comment">
             {{#each post.Comments}}
             <p>{{body}}</p>
-            <p>By {{User.username}} on 
+            <p>By {{user.username}} on 
                 {{format_date createdAt}}
                 </p>
             {{/each}}
         </div>
-        {{/if}} 
-</div>
+    </div>
+{{/if}} 
 {{!-- {{#if logged_in}} --}}
 <div>
    <h3>
@@ -37,3 +37,5 @@
 </div>
 <script src="/js/comment.js"></script>
 {{!-- {{/if}} --}}
+
+
