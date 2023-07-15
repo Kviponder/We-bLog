@@ -39,5 +39,5 @@ router.get("/edit/:id", withAuth, async (req, res) => {
     res.redirect("login");
   }
 });
-
+//Get single post?
 module.exports = router;
