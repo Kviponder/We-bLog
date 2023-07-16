@@ -1,4 +1,9 @@
 <div class="posts">
+  {{#if posts.length}}
+    <h2>Your Posts:</h2>
+  {{else}}
+    <h2>No Posts Yet!</h2>
+  {{/if}}
    {{#each posts}}
     <div class="post">
       <h2>
