@@ -136,6 +136,11 @@ footer {
   margin-bottom: 10px;
   font-size: 16px;
 }
+
+.comment {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
 .comment p {
   margin-bottom: 10px;
   font-size: 14px;  

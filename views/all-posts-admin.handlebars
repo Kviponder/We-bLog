@@ -4,7 +4,7 @@
   {{else}}
     <h2>No Posts Yet!</h2>
   {{/if}}
-   {{#each posts}}
+  {{#each posts}}
     <div class="post">
       <h2>
         <a href="/post/{{id}}">{{title}}</a>
@@ -12,7 +12,8 @@
       <p>{{body}}</p>
     </div>
     <div class="caption">
-      <p>By {{User.username}} on {{format_date createdAt}}</p>
+      <p>Posted on {{format_date createdAt}}</p>
     </div>
+    {{!-- <script src="/js/edit.js"></script> --}}
   {{/each}}
 </div>
