@@ -2,8 +2,8 @@ const postId = document.querySelector('input[name="post-id"]').value;
 
 const editHandler = async function(event) { 
     event.preventDefault();
-    const title = document.querySelector('input[name="post-title"]').value;
-    const body = document.querySelector('textarea[name="post-body"]').value;
+    const title = document.querySelector('input[name="title"]').value;
+    const body = document.querySelector('textarea[name="content"]').value;
     await fetch(`/api/post/${postId}`, {
         method: "PUT",
         body: JSON.stringify({
@@ -25,5 +25,5 @@ deleteHandler = async function() {
 }
 
 document.querySelector("#edit-post-form").addEventListener("submit", editHandler);
-document.querySelector("#edit-post-button").addEventListener("click", editHandler);
+// document.querySelector("#edit-post-button").addEventListener("click", editHandler);
 document.querySelector("#delete-post-button").addEventListener("click", deleteHandler);

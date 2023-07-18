@@ -14,6 +14,9 @@
     <div class="caption">
       <p>Posted on {{format_date createdAt}}</p>
     </div>
-    {{!-- <script src="/js/edit.js"></script> --}}
+    <div class="post-btns">
+      <a href="/dashboard/edit/{{id}}">Edit</a>
+    </div>
   {{/each}}
 </div>
+    <script src="/js/edit.js"></script>

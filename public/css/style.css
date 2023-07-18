@@ -86,13 +86,15 @@ footer {
 
 #login-form div,
 #sign-up-form div,
-#post-form div {
+#post-form div,
+#edit-post-form div {
   margin-bottom: 10px;
 }
 
 #login-form label,
 #sign-up-form label,
-#post-form label {
+#post-form label,
+#edit-post-form label {
   display: block;
   font-weight: bold;
 }
@@ -102,7 +104,9 @@ footer {
 #sign-up-form input[type="text"],
 #sign-up-form input[type="password"],
 #post-form input[type="text"],
-#post-form textarea {
+#post-form textarea,
+#edit-post-form input[type="text"],
+#edit-post-form textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -110,7 +114,8 @@ footer {
 
 #login-form button,
 #sign-up-form button,
-#post-form button {
+#post-form button,
+#edit-post-form button {
   display: block;
   width: 100%;
   padding: 10px;
@@ -122,7 +127,8 @@ footer {
 
 #login-form button:hover,
 #sign-up-form button:hover,
-#post-form button:hover {
+#post-form button:hover,
+#edit-post-form button:hover {
   background-color: #777;
   color: #fff;
 }
