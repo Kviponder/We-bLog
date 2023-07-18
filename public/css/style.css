@@ -76,7 +76,7 @@ footer {
 
 /* Additional styles for login form */
 #login-form,
-#sign-up-form,{
+#sign-up-form{
   width: 300px;
   padding: 20px;
   margin: 20px auto;
