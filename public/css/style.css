@@ -188,6 +188,21 @@ footer {
 #commentButton:hover {
   background-color: #777;
 }
+#editBtn {
+  text-decoration: none;
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  margin-top: 10px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#editBtn:hover {
+  background-color: #999;
+}
+
 
 /* Additional styles for responsiveness */
 @media (max-width: 768px) {
