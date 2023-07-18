@@ -16,14 +16,13 @@
         <div class="comment">
             {{#each post.Comments}}
             <p>{{body}}</p>
-            <p>By {{user.username}} on 
+            <p id="authorTag">By {{user.username}} on 
                 {{format_date createdAt}}
                 </p>
             {{/each}}
         </div>
     </div>
 {{/if}} 
-{{!-- {{#if logged_in}} --}}
 <div>
    <h3>
     <span>Add a Comment</span>
@@ -36,6 +35,5 @@
     </form>
 </div>
 <script src="/js/comment.js"></script>
-{{!-- {{/if}} --}}
 
 
